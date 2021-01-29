@@ -1,15 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="main.js"></script>
-  <title>Document</title>
+
+  <link rel="stylesheet" href="style.css">
+  <title>Diagrama de Doenças</title>
 </head>
 
 <body>
 
+  <h1>Identificando algumas doenças em peixes ornamentais</h1>
+
+
+
+
+  Responda se SIM ou NÃO: <input type="text" name="txtresp" id="txtresp">
+  <input type="button" value="Enviar" onclick="verificar()">
+  <div id="res"></div>
+  <div id="res1"></div>
+  <div id="res2"></div>
+
+  <script>
+    var txtr = window.document.querySelector('input#txtresp')
+    var res = window.document.querySelector('div#res')
+    var vel = String(txtr.value)
+    function verificar() {
+      var txtr = window.document.querySelector('input#txtresp')
+      var res = window.document.querySelector('div#res')
+      var vel = Number(txtr.value)
+      var teste = vel;
+      res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}Km/h</strong></p>`
+      if (teste === 1) {
+        vel = alert("Cheguei aqui")
+        var teste = vel;
+        res.innerHTML = `<p>Tais dentro do if</p>`
+
+
+      } else {
+        alert("To por ca")
+      }
+
+    }
+  </script>
 </body>
 
 </html>
